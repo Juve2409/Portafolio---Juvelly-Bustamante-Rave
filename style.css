@@ -1,0 +1,279 @@
+:root{
+    --color-primary:#6dfa51;
+    --color-secondary:#56e6c2; 
+}
+
+/* 1. RESETEO GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. CUERPO DEL DOCUMENTO */
+body {
+    background-image: url("img/image.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #0b0b0b;
+}
+
+/* 3. ENCABEZADO */
+header {
+    padding: 10px;
+    margin: 15px auto;
+    width: 80%;
+}
+
+#Nombre h1 {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+    font-size: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 40px;
+}
+
+/* Movimiento */
+#Nombre h1:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* 4. MENÚ DE NAVEGACIÓN */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0a0a0a;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+    text-shadow: 0 0 10px rgba(94, 91, 93, 0.285);
+    transform: scale(1.2);
+}
+
+/* 5. CONTENIDO PRINCIPAL */
+main {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(2px);
+}
+
+/* 6. INTRODUCCIÓN */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.75);
+    padding: 30px;
+    gap: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.intro:hover {
+    transform: scale(1.02);
+}
+
+.intro img {
+    width: 230px;
+    height: 335px;
+    border-radius: 50% / 35%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.intro img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== SECCIÓN TEMAS DE INTERÉS ===== */
+#temas_de_interes h5 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 30px 0;
+    padding: 20px;
+    transition: .3s;
+}
+
+#temas_de_interes h5:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* Contenedor de cada barra */
+.barra {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.75);
+    padding: 20px;
+    gap: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+
+/* Texto de temas */
+.barra p {
+    width: 30%;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Barra contenedora */
+.progreso {
+    flex: 1;
+    background: #ddd;
+    height: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+/* Barra rellena */
+.relleno {
+    height: 100%;
+    background: var(--color-primary);
+}
+
+/* Porcentaje */
+.porcentaje {
+    width: 50px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* 7. PROYECTOS FUTUROS */
+.proyectos-futuros {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.proyectos-futuros h3 {
+    font-size: 27px;
+    margin-bottom: 25px;
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.proyectos-futuros h3:hover {
+    transform: scale(1.05);
+}
+
+/* TARJETAS */
+.contenedor-proyectos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card-proyecto {
+    width: 280px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: .3s;
+}
+
+.card-proyecto:hover {
+    transform: scale(1.05);
+}
+
+.card-proyecto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 8. REDES SOCIALES */
+.redes-sociales {
+    text-align: center;
+    margin-top: 40px;
+    background: linear-gradient(135deg, #ffffffaa, #eeeeeeaa);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.redes-sociales h6 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-container img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.social-container img:hover {
+    transform: scale(1.2);
+}
+
+.redes-sociales p {
+    
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header, nav ul, main {
+        width: 95%;
+    }
+
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro img {
+        width: 200px;
+        height: 250px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
