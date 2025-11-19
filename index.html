@@ -6,41 +6,57 @@
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#sobre_mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#temas_de_interes">Temas de interés</a></li>
-                <li><a href="#social-container">Contáctame</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- NAV -->
+<header>
+    <div class="menu-container">
 
+        <!-- Botón Hamburguesa -->
+        <div class="hamburguesa" id="btnMenu">☰</div>
+
+        <!-- Menú -->
+        <nav id="navMenu">
+            <a href="#sobre_mi">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#temas_de_interes">Temas de interés</a>
+            <a href="#contacto">Contáctame</a>
+        </nav>
+
+    </div>
+</header>
+
+<script>
+    // Abrir / cerrar menú
+    document.getElementById("btnMenu").onclick = function () {
+        document.getElementById("navMenu").classList.toggle("activo");
+    }
+</script>
+
+
+    <!-- TÍTULO -->
     <section class="Titulo" id="Nombre">
         <h1>Juvelly Bustamante Rave</h1>
     </section>
 
     <main>
 
-        <!-- INTRO -->
+        <!-- INTRODUCCIÓN -->
+        <section id="sobre_mi">
         <div class="intro">
-            <div id="sobre_mi">
-                <h2>Sobre mí</h2>
-                <p>
-                    Soy Juvelly Bustamante, una joven apasionada por aprender acerca del análisis 
-                    y el desarrollo de software. En este portafolio encontrarás información sobre mis proyectos, 
-                    mis temas de interés y maneras de contactarme.
+             
+            <h2>Sobre mí</h2>
+            <p>
+                Soy Juvelly Bustamante, una joven apasionada por aprender acerca del análisis 
+                y el desarrollo de software. En este portafolio encontrarás información sobre mis proyectos, 
+                mis temas de interés y maneras de contactarme.
                 </p>
             </div>
-
-            <div>
-                <img src="img/Imagen de WhatsApp 2025-10-31 a las 09.36.01_8e44d6b0.jpg" 
-                     alt="Esta es una imagen que me identifica">
+        <div class="imagenes">
+                <img src="img/Imagen de WhatsApp 2025-10-31 a las 09.36.01_8e44d6b0.jpg" alt="Esta es una imagen que me identifica" class="Mi-foto">
             </div>
-        </div>
+        </section>
 
         <!-- PROYECTOS -->
         <section class="proyectos-futuros" id="proyectos">
@@ -84,37 +100,38 @@
         </section>
 
         <!-- TEMAS DE INTERÉS -->
-        <section class="Temas" id="temas_de_interes">
+        <section id="temas_de_interes">
             <h5>Temas de interés</h5>
+
+            <div class="barra">
+                <p>Ciberseguridad</p>
+                <div class="progreso">
+                    <div class="relleno" style="width: 30%;"></div>
+                </div>
+                <span class="porcentaje">30%</span>
+            </div>
+
+            <div class="barra">
+                <p>Bases de Datos</p>
+                <div class="progreso">
+                    <div class="relleno" style="width: 50%;"></div>
+                </div>
+                <span class="porcentaje">50%</span>
+            </div>
+
+            <div class="barra">
+                <p>Análisis de Sistemas</p>
+                <div class="progreso">
+                    <div class="relleno" style="width: 64%;"></div>
+                </div>
+                <span class="porcentaje">64%</span>
+            </div>
         </section>
 
-        <div class="barra">
-            <p>Ciberseguridad</p>
-            <div class="progreso">
-                <div class="relleno" style="width: 30%;"></div>
-            </div>
-            <span class="porcentaje">30%</span>
-        </div>
-
-        <div class="barra">
-            <p>Bases de Datos</p>
-            <div class="progreso">
-                <div class="relleno" style="width: 50%;"></div>
-            </div>
-            <span class="porcentaje">50%</span>
-        </div>
-
-        <div class="barra">
-            <p>Análisis de Sistemas</p>
-            <div class="progreso">
-                <div class="relleno" style="width: 64%;"></div>
-            </div>
-            <span class="porcentaje">64%</span>
-        </div>
-
         <!-- CONTACTO -->
-        <section class="redes-sociales" id="social-container">
+        <section class="redes-sociales" id="contacto">
             <h6>Contáctame</h6>
+
             <p class="correo">Correo: bustamantejuve2409@gmail.com</p>
 
             <div class="social-container">
@@ -140,3 +157,4 @@
 
 </body>
 </html>
+
