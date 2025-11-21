@@ -6,6 +6,7 @@
     --color-secondary: #56e6c2;
     --fondo-blanco: rgba(255, 255, 255, 0.75);
     --sombra: 0 0 12px rgba(0, 0, 0, 0.2);
+    --transition: 0.3s ease;
 }
 
 /* =====================================================
@@ -32,33 +33,28 @@ body {
 /* =====================================================
    HEADER / NAV
 ===================================================== */
-/* --------------------
-      MENÚ BASE
---------------------- */
-
 header {
     padding: 15px 0;
 }
 
-/* CONTENEDOR DEL MENÚ + HAMBURGUESA */
 .menu-container {
     width: 80%;
     margin: auto;
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
 }
 
-/* BOTÓN HAMBURGUESA (SIEMPRE VISIBLE) */
+/* Botón hamburguesa */
 .hamburguesa {
-    font-size: 20px;
+    font-size: 28px;
     cursor: pointer;
     font-weight: bold;
     user-select: none;
-    margin-left: auto;
+    padding: 5px;
 }
 
-/* MENÚ (MÓVIL: OCULTO) */
+/* Menú móvil */
 nav {
     display: none;
     flex-direction: column;
@@ -68,11 +64,8 @@ nav {
     width: 100%;
 }
 
-/* Menú cuando se activa */
 nav.activo {
     display: flex;
-    align-items: flex-start;
-
 }
 
 nav a {
@@ -80,7 +73,7 @@ nav a {
     color: #000;
     font-weight: bold;
     font-size: 1.1rem;
-    transition: 0.3s;
+    transition: var(--transition);
 }
 
 nav a:hover {
@@ -88,41 +81,29 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* --------------------
-      VERSIÓN PC
---------------------- */
+/* Vista escritorio */
 @media (min-width: 768px) {
-
-    /* El menú vuelve a estar normal */
     nav {
         display: flex !important;
         flex-direction: row;
         justify-content: flex-end;
-        background: none;
+        gap: 25px;
         padding: 0;
     }
 
-    /* Ajuste del contenedor */
-    .menu-container {
-        width: 80%;
-    }
-}
-/* Ocultar hamburguesa en computador */
-@media (min-width: 768px) {
     .hamburguesa {
         display: none;
     }
 }
-
 
 /* =====================================================
    TÍTULO
 ===================================================== */
 #Nombre h1 {
     text-align: center;
-    margin-top: 10px;
-    font-size: 1rem;
-    transition: 0.3s;
+    margin-top: 20px;
+    font-size: 2rem;
+    transition: var(--transition);
 }
 
 #Nombre h1:hover {
@@ -149,14 +130,22 @@ main {
     border-radius: 20px;
     box-shadow: var(--sombra);
     gap: 25px;
+    transition: var(--transition);
 }
 
 #sobre_mi h2 {
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 #sobre_mi p {
     text-align: justify;
+}
+
+#sobre_mi:hover{
+     transform: scale(1.05);
 }
 
 .imagenes img {
@@ -165,7 +154,7 @@ main {
     border-radius: 50% / 35%;
     object-fit: cover;
     box-shadow: 0.5rem 0rem 1rem rgb(105, 246, 107);
-    transition: 0.3s;
+    transition: var(--transition);
 }
 
 .imagenes img:hover {
@@ -182,11 +171,16 @@ main {
 
 .proyectos-futuros h3 {
     font-size: 2rem;
-    background: white;
+    background: var(--fondo-blanco);
     padding: 10px 20px;
     border-radius: 15px;
     display: inline-block;
     box-shadow: var(--sombra);
+    transition: var(--transition);
+}
+
+.proyectos-futuros h3:hover {
+    transform: scale(1.05);
 }
 
 .contenedor-proyectos {
@@ -199,11 +193,11 @@ main {
 
 .card-proyecto {
     width: 300px;
-    background: white;
+    background: var(--fondo-blanco);
     padding: 15px;
     border-radius: 15px;
     box-shadow: var(--sombra);
-    transition: 0.3s;
+    transition: var(--transition);
     text-align: center;
 }
 
@@ -226,12 +220,19 @@ main {
 }
 
 #temas_de_interes h5 {
+    display: flex;
+    align-items: center;
     text-align: center;
+    justify-content: center;
     font-size: 2rem;
     margin-bottom: 25px;
+    background: var(--fondo-blanco);
+    padding: 10px 20px;
+    border-radius: 15px;
+
+    box-shadow: var(--sombra);
 }
 
-/* Barra completa */
 .barra {
     display: flex;
     align-items: center;
@@ -259,52 +260,104 @@ main {
 .relleno {
     height: 100%;
     background: var(--color-primary);
+    transition: var(--transition);
 }
 
 .porcentaje {
-    width: 50px;
+    width: 55px;
     text-align: right;
     font-weight: bold;
 }
 
 /* =====================================================
-   CONTACTO
+   FORMULARIO DE CONTACTO
 ===================================================== */
-.redes-sociales {
-    margin-top: 60px;
+
+.contacto  {
     text-align: center;
-    background: linear-gradient(135deg, #ffffffaa, #eeeeeeaa);
-    padding: 25px;
+    padding: 60px 20px;
+   
+}
+
+.contacto h6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: var(--fondo-blanco);
+    padding: 2px;
     border-radius: 15px;
     box-shadow: var(--sombra);
 }
 
-.redes-sociales h6 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
+.contacto-contenedor {
+    max-width: 400px;
+    margin: auto;
 }
 
-.correo {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+/* FORMULARIO DIFUMINADO */
+.formulario-contacto {
+    background: var(--fondo-blanco);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow:  0.5rem 0rem 1rem var(--sombra);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario-contacto label {
     font-weight: bold;
+    text-align: left;
 }
 
+.formulario-contacto input,
+.formulario-contacto textarea {
+    padding: 10px;
+    border: 1px solid #efe8e8;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    border-color: var(--color-secondary);
+}
+
+.formulario-contacto button {
+    background: var(--color-primary);
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.formulario-contacto button:hover {
+    background: var(--color-secondary);
+}
+
+/* ICONOS DE REDES SOCIALES */
 .social-container {
+    margin-top: 25px;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
 }
 
 .social-container img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    transition: 0.3s;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
 }
 
 .social-container img:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 /* =====================================================
@@ -319,16 +372,16 @@ footer {
 }
 
 /* =====================================================
-   RESPONSIVE
+   RESPONSIVE - MÓVIL
 ===================================================== */
-@media (max-width: 768px) {
-    main, nav {
+@media (max-width: 400px) {
+
+    main {
         width: 95%;
     }
 
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
+    #Nombre h1 {
+        font-size: 1.4rem;
     }
 
     #sobre_mi {
@@ -341,6 +394,9 @@ footer {
         height: 260px;
     }
 }
+
+
+
 
 
 

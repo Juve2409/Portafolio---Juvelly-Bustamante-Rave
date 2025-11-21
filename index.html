@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,51 +11,52 @@
 <body>
 
     <!-- NAV -->
-<header>
-    <div class="menu-container">
+    <header>
+        <div class="menu-container">
 
-        <!-- Botón Hamburguesa -->
-        <div class="hamburguesa" id="btnMenu">☰</div>
+            <!-- Botón Hamburguesa -->
+            <div class="hamburguesa" id="btnMenu">☰</div>
 
-        <!-- Menú -->
-        <nav id="navMenu">
-            <a href="#sobre_mi">Sobre mí</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#temas_de_interes">Temas de interés</a>
-            <a href="#contacto">Contáctame</a>
-        </nav>
+            <!-- Menú -->
+            <nav id="navMenu">
+                <a href="#sobre_mi">Sobre mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#temas_de_interes">Temas de interés</a>
+                <a href="#contacto">Contáctame</a>
+            </nav>
 
-    </div>
-</header>
+        </div>
+    </header>
 
-<script>
-    // Abrir / cerrar menú
-    document.getElementById("btnMenu").onclick = function () {
-        document.getElementById("navMenu").classList.toggle("activo");
-    }
-</script>
-
+    <script>
+        // Abrir / cerrar menú móvil
+        document.getElementById("btnMenu").onclick = function () {
+            document.getElementById("navMenu").classList.toggle("activo");
+        };
+    </script>
 
     <!-- TÍTULO -->
-    <section class="Titulo" id="Nombre">
+    <section class="titulo" id="Nombre">
         <h1>Juvelly Bustamante Rave</h1>
     </section>
 
     <main>
 
-        <!-- INTRODUCCIÓN -->
+        <!-- SOBRE MÍ -->
         <section id="sobre_mi">
-        <div class="intro">
-             
-            <h2>Sobre mí</h2>
-            <p>
-                Soy Juvelly Bustamante, una joven apasionada por aprender acerca del análisis 
-                y el desarrollo de software. En este portafolio encontrarás información sobre mis proyectos, 
-                mis temas de interés y maneras de contactarme.
+            <div class="intro">
+                <h2>Sobre mí</h2>
+                <p>
+                    Soy Juvelly Bustamante, una joven apasionada por aprender acerca del análisis 
+                    y el desarrollo de software. En este portafolio encontrarás información sobre mis proyectos, 
+                    mis temas de interés y maneras de contactarme.
                 </p>
             </div>
-        <div class="imagenes">
-                <img src="img/Imagen de WhatsApp 2025-10-31 a las 09.36.01_8e44d6b0.jpg" alt="Esta es una imagen que me identifica" class="Mi-foto">
+
+            <div class="imagenes">
+                <img src="img/Imagen de WhatsApp 2025-10-31 a las 09.36.01_8e44d6b0.jpg" 
+                     alt="Fotografía de Juvelly Bustamante" 
+                     class="mi-foto">
             </div>
         </section>
 
@@ -77,7 +79,7 @@
 
                 <!-- Proyecto 2 -->
                 <div class="card-proyecto">
-                    <img src="img/IA.jpg" alt="Proyecto de IA">
+                    <img src="img/IA.jpg" alt="Proyecto de Inteligencia Artificial">
                     <h4>Inteligencia Artificial (IA)</h4>
                     <p>
                         A futuro me veo aprovechando la inteligencia artificial como una herramienta clave 
@@ -128,33 +130,64 @@
             </div>
         </section>
 
-        <!-- CONTACTO -->
-        <section class="redes-sociales" id="contacto">
+        <!-- ============================= -->
+        <!--          CONTACTO            -->
+        <!-- ============================= -->
+
+        <section class="contacto" id="contacto">
             <h6>Contáctame</h6>
 
-            <p class="correo">Correo: bustamantejuve2409@gmail.com</p>
+            <div class="contacto-contenedor">
 
-            <div class="social-container">
-                <a href="https://wa.me/573243095696" target="_blank">
-                    <img src="img/WhatsApp_icon.png" alt="WhatsApp">
-                </a>
+                <!-- FORMULARIO -->
+                <form action="#" method="POST" class="formulario-contacto">
 
-                <a href="https://www.instagram.com/tuusuario" target="_blank">
-                    <img src="img/instagram-icon.png" alt="Instagram">
-                </a>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
 
-                <a href="https://www.facebook.com/bustamante.j.ve.r" target="_blank">
-                    <img src="img/FACEBOOK.png" alt="Facebook">
-                </a>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <!-- ICONOS -->
+                <div class="social-container">
+
+                    <a href="mailto:bustamantejuve2409@gmail.com">
+                        <img src="img/gmail-icon.png" alt="Gmail">
+                    </a>
+
+                    <a href="https://wa.me/573243095696" target="_blank">
+                        <img src="img/WhatsApp_icon.png" alt="WhatsApp">
+                    </a>
+
+                    <a href="https://www.instagram.com/tuusuario" target="_blank">
+                        <img src="img/instagram-icon.png" alt="Instagram">
+                    </a>
+
+                    <a href="https://www.facebook.com/bustamante.j.ve.r" target="_blank">
+                        <img src="img/FACEBOOK.png" alt="Facebook">
+                    </a>
+
+                </div>
+
             </div>
+
         </section>
 
     </main>
 
     <footer>
-        <p>© 2025 Juvelly Bustamante Rave / Todos los derechos reservados</p>
+        <p>© 2025 Juvelly Bustamante Rave — Todos los derechos reservados</p>
     </footer>
 
 </body>
+
 </html>
+
+
 
